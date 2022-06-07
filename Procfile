@@ -1,0 +1,1 @@
+web: gunicorn webchgk.wsgi --log-file -
