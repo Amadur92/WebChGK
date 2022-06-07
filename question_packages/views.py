@@ -4,11 +4,11 @@ from django.views.generic import TemplateView
 
 
 # Create your views here.
-class SingleQuestionPageViev(TemplateView):
+class SingleQuestionPageView(TemplateView):
     template_name = 'single_question.html'
 
 
-class AboutPageViev(TemplateView):
+class AboutPageView(TemplateView):
     template_name = 'about.html'
 
 def show_packages(request):
