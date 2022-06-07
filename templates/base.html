@@ -1,5 +1,9 @@
 <!-- templates/base.html -->
+{% load static %}
 <header>
+
+
+<link rel="icon"href="{% static 'favicon.ico' %}">
 <a href="{% url 'home' %}">Home, bla bla bla</a> | <a href="{% url 'about' %}">About</a>
 </header>
 {% block content %}
