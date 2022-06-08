@@ -1,2 +1,2 @@
-web: gunicorn Web_ChGK.wsgi --log-file -
-web: python manage.py runserver
+web: gunicorn Web_ChGK_project.wsgi --log-file -
+
