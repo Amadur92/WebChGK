@@ -1,6 +1,10 @@
 <!-- templates/Single_question.html -->
 {% extends 'base.html' %}
 {% block content%}
-<h1>АНЯ, ПОЙДЕМ ГУЛЯТЬ С СОБАКОЙ</h1>
-<p>Майя не умеет приседать! </p>
+<h1>Message board homepage</h1>
+<ul>
+{% for post in object_list %}
+<li>{{ post }}</li>
+{% endfor %}
+</ul>
 {% endblock%}
