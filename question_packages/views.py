@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 class SingleQuestionPageView(TemplateView):
-    template_name = 'single_question.html'
+    template_name = 'Single_question.html'
 
 
 class AboutPageView(TemplateView):
