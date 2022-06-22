@@ -1,0 +1,14 @@
+<!-- templates/random_question.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h1> RANDOM QUESTION! </h1>
+
+<div class="qestion-entry">
+    <p>{{question.text}}</p>
+
+    <details> {{question.answer}}</details>
+
+</div>
+
+<a href="{% url "random_question" %}">Another random question</a>
+{% endblock content %}

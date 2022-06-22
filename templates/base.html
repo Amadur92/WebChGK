@@ -1,7 +1,13 @@
 <!-- templates/base.html -->
-
+{% load static %}
+<head>
+    <title> Quiz questions </title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 <header>
-<a href="{% url 'home' %}">Home, bla bla bla</a> | <a href="{% url 'about' %}">About</a>
+<p> <a href = "{% url 'create_question' %}"> Create new question </a> </p>
+
+<a href="{% url 'home' %}">Home, bla bla bla</a> | <a href="{% url 'about' %}">About</a> |  <a href="{% url 'random_question' %}">Random Question</a>
 </header>
 {% block content %}
 {% endblock %}

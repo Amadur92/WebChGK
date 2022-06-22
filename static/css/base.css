@@ -1,0 +1,8 @@
+header h1 a {
+    color : red;
+
+}
+header a {
+    color: green;
+    size: 25px;
+}

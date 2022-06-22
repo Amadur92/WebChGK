@@ -1,0 +1,11 @@
+<!-- templates/Single_question.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h1> DELETE QUESTION! </h1>
+
+<form action = "" method = 'post'> {% csrf_token %}
+    <p> Are you sure want to delete it? </p>
+    <input type = 'submit' value = 'Confirm' />
+
+</form>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 
 
@@ -24,6 +24,10 @@ class Questions(models.Model):
 
     def __str__(self):
         return self.question_text[:50]
+    
+    
+    def get_absolute_url(self):
+        return reverse("home", kwargs={"pk": self.pk})
     
     #class Meta:
     #   managed = False

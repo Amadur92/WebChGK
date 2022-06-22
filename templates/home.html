@@ -4,7 +4,8 @@
 <h1>Message board homepage</h1>
 <ul>
 {% for post in object_list %}
-<li>{{ post }}</li>
+<li><a href="{% url 'single_question' post.pk %}">{{ post.question_text }}</li>
 {% endfor %}
+
 </ul>
 {% endblock%}

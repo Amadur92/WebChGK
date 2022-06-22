@@ -1,8 +1,17 @@
 <!-- templates/Single_question.html -->
 {% extends 'base.html' %}
 {% block content %}
-<h1>Марта свинюка</h1>
-<h1>Марта свинюка</h1>
-<h1>Марта свинюка</h1>
+<h1> RANDOM QUESTION! </h1>
 
+<div class="qestion-entry">
+    <p>{{question.question_text}}</p>
+
+    <details> {{question.answer}}</details>
+
+
+</div>
+
+<a href = "{% url 'delete_question' question.pk %}"> + DELETE </a>
+
+<a href="{% url 'random_question' %}">Another random question</a>
 {% endblock %}
