@@ -11,7 +11,7 @@
 
 </div>
 
-<a href = "{% url 'delete_question' question.pk %}"> + DELETE </a>
-
+<p><a href = "{% url 'delete_question' question.pk %}"> + DELETE </a></p>
+<p><a href = "{% url 'update_question' question.pk %}"> + UPDATE </a></p>
 <a href="{% url 'random_question' %}">Another random question</a>
 {% endblock %}

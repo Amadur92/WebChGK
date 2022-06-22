@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView, DetailView, DeleteView, UpdateView, CreateView
+from django.views.generic import TemplateView, ListView, DetailView, DeleteView, UpdateView, CreateView, UpdateView
 from django.views.generic.edit import CreateView
 from .models import Questions
 from django.urls import reverse_lazy
@@ -12,7 +12,8 @@ class SingleQuestionPageView(DetailView):
     template_name = 'Single_question.html'
     context_object_name = 'question'
 
-class CreateQuestionView(CreateView):
+
+class QuestionCreateView(CreateView):
     model = Questions
     template_name = 'create_question.html'
     fields = '__all__'
@@ -37,3 +38,10 @@ class QuestionDeleteView(DeleteView):
     model = Questions
     template_name = 'delete_question.html'
     success_url = reverse_lazy('home')
+
+
+class QuestionUpdateView(UpdateView):
+    model = Questions
+    template_name = 'update_question.html'
+    success_url = reverse_lazy('home')
+    fields = '__all__'

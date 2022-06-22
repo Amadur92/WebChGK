@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="{% static 'css/base.css'%}">
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 <header>
+    {% if user.is_authenticated %}
+    <p> Hi, {{ user.username}}</p> 
+    <p><a href="{% url 'logout' %}" > Logout </a></p>
+        {% else%}
+        <p> You must log in, motherf**ker</p>
+
+    <p><a href="{% url 'login' %}"> Login </a></p>
+    <p><a href="{% url 'signup' %}"> Sign Up </a></p>
+        {% endif %}
 <p> <a href = "{% url 'create_question' %}"> Create new question </a> </p>
 
 <a href="{% url 'home' %}">Home, bla bla bla</a> | <a href="{% url 'about' %}">About</a> |  <a href="{% url 'random_question' %}">Random Question</a>
